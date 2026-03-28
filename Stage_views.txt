@@ -1,0 +1,545 @@
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.BW_COPA_DailyFeePoker_Units AS
+SELECT
+    `BW_COPA_DailyFeePoker_Units_id` AS bw_copa_dailyfee_poker_units_id,
+    `SALES_ORG` AS sales_org,
+    `JURIS_NUM` AS juris_num,
+    `JURIS` AS juris,
+    `PROFIT_CTR` AS profit_ctr,
+    `SOLD_TO_CUST` AS sold_to_cust,
+    `SOLD_TO_NAME` AS sold_to_name,
+    `INSTALL_AT` AS install_at,
+    `INSTALL_AT_NAME` AS install_at_name,
+    `DOC_TYPE` AS doc_type,
+    `DOC_NUMBER` AS doc_number,
+    `LINE_ITEM` AS line_item,
+    `MATERIAL_NUM` AS material_num,
+    `SERIAL_NUM` AS serial_num,
+    `THEME` AS theme,
+    `THEME_ID` AS theme_id,
+    `TARGET_QTY` AS target_qty,
+    `FROM_DATE` AS from_date,
+    `TO_DATE` AS to_date,
+    `BILLING_DATE` AS billing_date,
+    `NO_OF_BILLING_DAYS` AS no_of_billing_days,
+    `NET_PRICE` AS net_price,
+    `LOCL_NET_P` AS locl_net_p,
+    `NET_VALUE` AS net_value,
+    `LOCL_NET_V` AS locl_net_v,
+    `AG_Theme` AS ag_theme,
+    `EOM_Installed_Base` AS eom_installed_base,
+    `Corp_Cust_No` AS corp_cust_no,
+    `Corp_Cust_Name` AS corp_cust_name,
+    `EOM_Machine_Days` AS eom_machine_days,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.BW_COPA_DailyFeePoker_Units
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.BW_ZRBINQ_BillingPlans AS
+SELECT
+    `BW_ZRBINQ_BillingPlans_id` AS bw_zrbinq_billingplans_id,
+    `End_Of_Month_Date` AS end_of_month_date,
+    `Install_At` AS install_at,
+    `Serial_Num` AS serial_num,
+    `Coin_In` AS coin_in,
+    `Gross_Win` AS gross_win,
+    `Cust_Split` AS cust_split,
+    `IGT_Split` AS igt_split,
+    `Gross_IGT_Rev` AS gross_igt_rev,
+    `Net_IGT_Rev` AS net_igt_rev,
+    `Machine_Days` AS machine_days,
+    `Par_Split` AS par_split,
+    `IS_DELETED` AS is_deleted,
+    `DOC_TYPE` AS doc_type,
+    `DOC_NUMBER` AS doc_number,
+    `LINE_ITEM` AS line_item,
+    `SOLD_TO_CUST` AS sold_to_cust,
+    `SOLD_TO_NAME` AS sold_to_name,
+    `INSTALL_AT_NAME` AS install_at_name,
+    `PROFIT_CTR` AS profit_ctr,
+    `PROFIT_CTR_DESC` AS profit_ctr_desc,
+    `MATERIAL_NUM` AS material_num,
+    `THEME` AS theme,
+    `THEME_ID` AS theme_id,
+    `NO_OF_BILLING_DAYS` AS no_of_billing_days,
+    `SHORT_TEXT` AS short_text,
+    `TARGET_QTY` AS target_qty,
+    `BILL_STATUS` AS bill_status,
+    `FROM_DATE` AS from_date,
+    `TO_DATE` AS to_date,
+    `BILLING_DATE` AS billing_date,
+    `NET_VALUE` AS net_value,
+    `NET_PRICE` AS net_price,
+    `GO_LIVE` AS go_live,
+    `SHUT_DOWN` AS shut_down,
+    `JURIS` AS juris,
+    `ACCT_EXEC_NAME` AS acct_exec_name,
+    `REF_MATERIAL_NUM` AS ref_material_num,
+    `CUSTOMER_GROUP` AS customer_group,
+    `JURIS_NUM` AS juris_num,
+    `SALES_GROUP` AS sales_group,
+    `SALES_OFFICE` AS sales_office,
+    `SALES_ORG` AS sales_org,
+    `ACCT_EXEC` AS acct_exec,
+    `ADD_VALUE_DAYS` AS add_value_days,
+    `BILL_PLAN` AS bill_plan,
+    `BRAND` AS brand,
+    `CALENDAR` AS calendar,
+    `DENOM` AS denom,
+    `FISCAL_DATE` AS fiscal_date,
+    `INSTALL` AS install,
+    `PERIOD_LEN` AS period_len,
+    `REJECTION` AS rejection,
+    `REMOVE` AS remove,
+    `SYSTEM` AS system,
+    `EQUIPMENT_NUM` AS equipment_num,
+    `PROMO_ID` AS promo_id,
+    `PROMO` AS promo,
+    `Original_Document` AS original_document,
+    `Original_Document_item` AS original_document_item,
+    `CONDITION_TYPE` AS condition_type,
+    `TYPE` AS type,
+    `Orig_Doc` AS orig_doc,
+    `Orig_Item` AS orig_item
+FROM ${bronze_catalog}.atlas.BW_ZRBINQ_BillingPlans
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.GameOpsInstallBaseActivity AS
+SELECT
+    `GameOpsInstallBaseActivity_id` AS gameopsinstallbaseactivity_id,
+    `Date_To` AS date_to,
+    `Bingo_Non_Premium` AS bingo_non_premium,
+    `Serial_Num` AS serial_num,
+    `Customer_Number` AS customer_number,
+    `System_Code` AS system_code,
+    `Brand_Code` AS brand_code,
+    `Theme_Code_Updated` AS theme_code_updated,
+    `Unit_Type` AS unit_type,
+    `Activity` AS activity,
+    `STL_Flag` AS stl_flag,
+    `Material_Updated` AS material_updated,
+    `Profit_Center` AS profit_center,
+    `Install_Date` AS install_date,
+    `Go_Live_Date` AS go_live_date,
+    `Shutdown_Date` AS shutdown_date,
+    `Removal_Date` AS removal_date,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.GameOpsInstallBaseActivity
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.GameOpsInstallBasePSD AS
+SELECT
+    `GameOpsInstallBasePSD_id` AS gameopsinstallbasepsd_id,
+    `Date_To` AS date_to,
+    `Product_Type` AS product_type,
+    `Serial_Num` AS serial_num,
+    `Customer_Number` AS customer_number,
+    `System_Code` AS system_code,
+    `Brand_Code` AS brand_code,
+    `Theme_Code_Fix` AS theme_code_fix,
+    `Unit_Type` AS unit_type,
+    `Material_Updated` AS material_updated,
+    `STL_Flag_Cosmo` AS stl_flag_cosmo,
+    `Profit_Center` AS profit_center,
+    `Install_Date` AS install_date,
+    `Go_Live_Date` AS go_live_date,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.GameOpsInstallBasePSD
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Exp_Depreciation AS
+SELECT
+    `RPM_Exp_Depreciation_id` AS rpm_exp_depreciation_id,
+    `Co_Code` AS co_code,
+    `Asset` AS asset,
+    `Sub` AS sub,
+    `Asset_Sub` AS asset_sub,
+    `Class` AS class,
+    `Life` AS life,
+    `SerialNum` AS serialnum,
+    `Material` AS material,
+    `Asset_Description` AS asset_description,
+    `Group` AS group_name,
+    `Group_2` AS group_2,
+    `NVGLAcct` AS nvglacct,
+    `NVADGLAcct` AS nvadglacct,
+    `NVDeprExpGL` AS nvdeprexpgl,
+    `CFINGLAcct` AS cfinglacct,
+    `CFINADGLAcct` AS cfinadglacct,
+    `CFIN_FS_ROLLUP` AS cfin_fs_rollup,
+    `Inst_At` AS inst_at,
+    `Customer_Name` AS customer_name,
+    `Status` AS status,
+    `Cost_Ctr` AS cost_ctr,
+    `Cost_Ctr_Description` AS cost_ctr_description,
+    `Cost_Center_Owner` AS cost_center_owner,
+    `Jurisdiction` AS jurisdiction,
+    `Func_Area` AS func_area,
+    `SYS_Category` AS sys_category,
+    `PLCA_Group` AS plca_group,
+    `Global_PLCA_Name` AS global_plca_name,
+    `Brand` AS brand,
+    `Game_Theme` AS game_theme,
+    `CapDate` AS capdate,
+    `Depr_Start_Date` AS depr_start_date,
+    `Retirement_Date` AS retirement_date,
+    `DepKy` AS depky,
+    `CapVal_USD` AS capval_usd,
+    `Accum_Val_USD` AS accum_val_usd,
+    `NetBook_USD` AS netbook_usd,
+    `Salvage_Value` AS salvage_value,
+    `JANUARY` AS january,
+    `FEBRUARY` AS february,
+    `MARCH` AS march,
+    `APRIL` AS april,
+    `MAY` AS may,
+    `JUNE` AS june,
+    `JULY` AS july,
+    `AUGUST` AS august,
+    `SEPTEMBER` AS september,
+    `OCTOBER` AS october,
+    `NOVEMBER` AS november,
+    `DECEMBER` AS december,
+    `TOTAL` AS total,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Exp_Depreciation
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Intl_Performance_EMEA_Africa AS
+SELECT
+    `RPM_Intl_Performance_EMEA_Africa_id` AS rpm_intl_performance_emea_africa_id,
+    `SERIAL_NUM` AS serial_num,
+    `DOC_NUMBER` AS doc_number,
+    `LINE_ITEM` AS line_item,
+    `DOC_TYPE` AS doc_type,
+    `EQUIPMENT_NUM` AS equipment_num,
+    `SOLD_TO_CUST` AS sold_to_cust,
+    `SOLD_TO_NAME` AS sold_to_name,
+    `MATERIAL_NUM` AS material_num,
+    `THEME` AS theme,
+    `TARGET_QTY` AS target_qty,
+    `FROM_DATE` AS from_date,
+    `TO_DATE` AS to_date,
+    `BILLING_DATE` AS billing_date,
+    `NET_PRICE` AS net_price,
+    `NO_OF_BILLING_DAYS` AS no_of_billing_days,
+    `NET_VALUE` AS net_value,
+    `BRAND` AS brand,
+    `PROFIT_CTR_DESC` AS profit_ctr_desc,
+    `PROFIT_CTR` AS profit_ctr,
+    `BILL_STATUS` AS bill_status,
+    `THEME_ID` AS theme_id,
+    `INSTALL_AT` AS install_at,
+    `INSTALL_AT_NAME` AS install_at_name,
+    `CONDITION_TYPE` AS condition_type,
+    `ACCT_EXEC` AS acct_exec,
+    `ACCT_EXEC_NAME` AS acct_exec_name,
+    `SALES_ORG` AS sales_org,
+    `SALES_OFFICE` AS sales_office,
+    `SALES_GROUP` AS sales_group,
+    `BILL_PLAN` AS bill_plan,
+    `SHORT_TEXT` AS short_text,
+    `PERIOD_LEN` AS period_len,
+    `ADD_VALUE_DAYS` AS add_value_days,
+    `LOCAL_NET_VALUE` AS local_net_value,
+    `LOCAL_NET_PRICE` AS local_net_price,
+    `SYSTEM_ID` AS system_id,
+    `SYSTEM` AS system,
+    `BRAND_ID` AS brand_id,
+    `PROMO_ID` AS promo_id,
+    `PROMO` AS promo,
+    `UNIQUE_PKG_ID` AS unique_pkg_id,
+    `DENOM` AS denom,
+    `JURIS_NUM` AS juris_num,
+    `JURIS` AS juris,
+    `INSTALL` AS install,
+    `REMOVE` AS remove,
+    `GO_LIVE` AS go_live,
+    `SHUT_DOWN` AS shut_down,
+    `FISCAL_DATE` AS fiscal_date,
+    `CUSTOMER_GROUP` AS customer_group,
+    `Original_Document` AS original_document,
+    `Original_Document_item` AS original_document_item,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Intl_Performance_EMEA_Africa
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Intl_Performance_EMEA_FixedFee AS
+SELECT
+    `RPM_Intl_Performance_EMEA_FixedFee_id` AS rpm_intl_performance_emea_fixedfee_id,
+    `PremiumCategory` AS premium_category,
+    `Recurring_Type` AS recurring_type,
+    `UnitGrouping` AS unit_grouping,
+    `MLP` AS mlp,
+    `Serial_Number` AS serial_number,
+    `Sold_To_Number` AS sold_to_number,
+    `Install_At_Number` AS install_at_number,
+    `Sold_To_Name` AS sold_to_name,
+    `Install_At_Name` AS install_at_name,
+    `Group` AS group_name,
+    `Country` AS country,
+    `Jurisdiction` AS jurisdiction,
+    `Region` AS region,
+    `PC_Country` AS pc_country,
+    `Profit_center` AS profit_center,
+    `Profit_center_description` AS profit_center_description,
+    `SAP_Material` AS sap_material,
+    `Cabinet` AS cabinet,
+    `Brand_Description` AS brand_description,
+    `Theme_Description` AS theme_description,
+    `Pricing_Local_Currency_pDpM` AS pricing_local_currency_p_dpm,
+    `Pricing_Local_Currency_pMpM` AS pricing_local_currency_p_mpm,
+    `Local_Currency` AS local_currency,
+    `Pricing_USD_pDpM` AS pricing_usd_p_dpm,
+    `Sales_Teamleader` AS sales_teamleader,
+    `Account_Manager` AS account_manager,
+    `Closure_date_MM_DD_YYYY_ENTER_DAY_FIRST` AS closure_date_mm_dd_yyyy_enter_day_first,
+    `Casino_Opening_Date_MM_DD_YYYY_ENTER_DAY_FIRST` AS casino_opening_date_mm_dd_yyyy_enter_day_first,
+    `Unit_Status` AS unit_status,
+    `Invoice_Amount_USD` AS invoice_amount_usd,
+    `Invoice_Amount_Local_Currency` AS invoice_amount_local_currency,
+    `Total_Active_days` AS total_active_days,
+    `Total_In_Active_days` AS total_in_active_days,
+    `Check` AS check_value,
+    `Total_CN_Value` AS total_cn_value,
+    `Notes_changes_in_fees_any_other_comments` AS notes_changes_in_fees_any_other_comments,
+    `Correct_Invoice_Amount_USD_for_the_last_month_where_corrections_are_required` AS correct_invoice_amount_usd_for_the_last_month_where_corrections_are_required,
+    `Correct_Credit_Amount_USD_for_the_last_month_where_corrections_are_required` AS correct_credit_amount_usd_for_the_last_month_where_corrections_are_required,
+    `Total_Revenue_USD` AS total_revenue_usd,
+    `Go_Live_Date_MM_DD_YYYY_ENTER_DAY_FIRST` AS go_live_date_mm_dd_yyyy_enter_day_first,
+    `Future_date_for_update_daily_fee_removal_option_to_terminate_contract_change_etc_MM_DD_YYYY` AS future_date_for_update_daily_fee_removal_option_to_terminate_contract_change_etc_mm_dd_yyyy,
+    `Buyout_option_enter_date_MM_DD_YYYY_or_No` AS buyout_option_enter_date_mm_dd_yyyy_or_no,
+    `Sales_Type_Lease_STL` AS sales_type_lease_stl,
+    `OPP_number` AS opp_number,
+    `Quote_number` AS quote_number,
+    `Docs_in_SalesForce` AS docs_in_salesforce,
+    `OPP_Name` AS opp_name,
+    `Remark` AS remark,
+    `SalesForce_Product` AS salesforce_product,
+    `Contract_expiration_date_MM_DD_YYYY_ENTER_DAY_FIRST` AS contract_expiration_date_mm_dd_yyyy_enter_day_first,
+    `New_unit_type_Yes_also_when_you_entered_Yes_in_column_Novation_otherwise_it_stays_blank` AS new_unit_type_yes_also_when_you_entered_yes_in_column_novation_otherwise_it_stays_blank,
+    `Novation_if_Novation_type_Yes_also_for_Terminated_units_otherwise_it_stays_blank` AS novation_if_novation_type_yes_also_for_terminated_units_otherwise_it_stays_blank,
+    `Termination_Date_MM_DD_YYYY_ENTER_DAY_FIRST` AS termination_date_mm_dd_yyyy_enter_day_first,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Intl_Performance_EMEA_FixedFee
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Intl_Performance_EMEA_GreeceWLA AS
+SELECT
+    `RPM_Intl_Performance_EMEA_GreeceWLA_id` AS rpm_intl_performance_emea_greecewla_id,
+    `Month_of_Period_Start` AS month_of_period_start,
+    `Machine_ID_SERIAL` AS machine_id_serial,
+    `Sum_of_Coin_In` AS sum_of_coin_in,
+    `Sum_of_Net_Win` AS sum_of_net_win,
+    `Net_Win_2_Players_Reward_deducted` AS net_win_2_players_reward_deducted,
+    `EGM_Day_Count` AS egm_day_count,
+    `WPUPD` AS wpupd,
+    `Fee_Revenue` AS fee_revenue,
+    `Distinct_Ser_Count` AS distinct_ser_count,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Intl_Performance_EMEA_GreeceWLA
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Intl_Performance_LAC AS
+SELECT
+    `RPM_Intl_Performance_LAC_id` AS rpm_intl_performance_lac_id,
+    `Serial_Number` AS serial_number,
+    `Posting_Period` AS posting_period,
+    `Sold_To_Cust_Num` AS sold_to_cust_num,
+    `Source_Currency` AS source_currency,
+    `Gross_Win` AS gross_win,
+    `Net_Win` AS net_win,
+    `IGT_Split` AS igt_split,
+    `Discount` AS discount,
+    `Net_IGT_Rev` AS net_igt_rev,
+    `Days_on_line` AS days_on_line,
+    `Country` AS country,
+    `Brand` AS brand,
+    `Theme` AS theme,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Intl_Performance_LAC
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Peformance_PremLotto_DE AS
+SELECT
+    `RPM_Peformance_PremLotto_DE_id` AS rpm_peformance_premlotto_de_id,
+    `Track` AS track,
+    `Vendor` AS vendor,
+    `Theme` AS theme,
+    `License` AS license,
+    `Amount_Played` AS amount_played,
+    `Amount_Won` AS amount_won,
+    `Net_Revenue` AS net_revenue,
+    `IGT_FEE` AS igt_fee,
+    `StartDate` AS startdate,
+    `EndDate` AS enddate,
+    `PC` AS pc,
+    `PROFIT_CTR_DESC` AS profit_ctr_desc,
+    `BRAND` AS brand,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Peformance_PremLotto_DE
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Peformance_PremLotto_NY AS
+SELECT
+    `RPM_Peformance_PremLotto_NY_id` AS rpm_peformance_premlotto_ny_id,
+    `Location` AS location,
+    `DeviceName` AS device_name,
+    `IGT_SN` AS igt_sn,
+    `PROFIT_CTR` AS profit_ctr,
+    `PROFIT_CTR_DESC` AS profit_ctr_desc,
+    `BRAND` AS brand,
+    `Credits_Played` AS credits_played,
+    `Coupons_Played` AS coupons_played,
+    `Credits_Won` AS credits_won,
+    `Net_Win_Credits` AS net_win_credits,
+    `FEE_7_25` AS fee_7_25,
+    `Theme` AS theme,
+    `Period` AS period,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Peformance_PremLotto_NY
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Peformance_PremLotto_RI AS
+SELECT
+    `RPM_Peformance_PremLotto_RI_id` AS rpm_peformance_premlotto_ri_id,
+    `Date` AS date_value,
+    `VLT_Desc` AS vlt_desc,
+    `Serial_Number` AS serial_number,
+    `Cash_In` AS cash_in,
+    `Cash_Out` AS cash_out,
+    `Net_Income` AS net_income,
+    `Commission` AS commission,
+    `IGT_FEE` AS igt_fee,
+    `Location` AS location,
+    `Vendor` AS vendor,
+    `Game_Set` AS game_set,
+    `PC` AS pc,
+    `PC_DESC` AS pc_desc,
+    `Note` AS note,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Peformance_PremLotto_RI
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Performance_CDS_Class_II AS
+SELECT
+    `Install_At` AS install_at,
+    `Document_Num` AS document_num,
+    `Invoice_Date_From` AS invoice_date_from,
+    `Invoice_Date_To` AS invoice_date_to,
+    `Jurisdiction` AS jurisdiction,
+    `Mjpjur` AS mjpjur,
+    `Mjsegment` AS mjsegment,
+    `Install_At_Cust_Name` AS install_at_cust_name,
+    `Serial_Num` AS serial_num,
+    `Brand_Code` AS brand_code,
+    `Brand` AS brand,
+    `Theme_Code` AS theme_code,
+    `Theme` AS theme,
+    `Install_At_State` AS install_at_state,
+    `Aggregated_Amount_Wagered` AS aggregated_amount_wagered,
+    `Aggregated_Amount_Won` AS aggregated_amount_won,
+    `Gross_Win` AS gross_win,
+    `Aggregated_Machine_Days` AS aggregated_machine_days,
+    `Lease_Rate` AS lease_rate,
+    `Flat_Rate` AS flat_rate,
+    `Min_Per_Day` AS min_per_day,
+    `Casino_Split` AS casino_split,
+    `IGT_Split` AS igt_split,
+    `Total_Rev` AS total_rev,
+    `Total_Discount` AS total_discount,
+    `Net_Amount` AS net_amount,
+    `Concession_Amount` AS concession_amount
+FROM ${bronze_catalog}.atlas.RPM_Performance_CDS_Class_II
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Performance_CDS_Class_II_ManualBilling AS
+SELECT
+    `RPM_Performance_CDS_Class_II_ManualBilling_id` AS rpm_performance_cds_class_ii_manualbilling_id,
+    `End_of_Month_Date` AS end_of_month_date,
+    `Install_At` AS install_at,
+    `Serial_Num` AS serial_num,
+    `Coin_In` AS coin_in,
+    `Gross_Win` AS gross_win,
+    `Cust_Split` AS cust_split,
+    `IGT_Split` AS igt_split,
+    `Gross_IGT_Rev` AS gross_igt_rev,
+    `Net_IGT_Rev` AS net_igt_rev,
+    `Machine_Days` AS machine_days,
+    `Par_Split` AS par_split,
+    `Cust_Name_Ignore_for_SQL_Upload` AS cust_name_ignore_for_sql_upload,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Performance_CDS_Class_II_ManualBilling
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.RPM_Performance_WAP_NewCanada AS
+SELECT
+    `RPM_Performance_WAP_NewCanada_id` AS rpm_performance_wap_newcanada_id,
+    `Brand_Code` AS brand_code,
+    `Theme_Code` AS theme_code,
+    `System` AS system,
+    `Customer_Num_Install_At` AS customer_num_install_at,
+    `Serial_Num` AS serial_num,
+    `EOD_Date` AS eod_date,
+    `Machine_Hours` AS machine_hours,
+    `Meter_Wagered_Amount` AS meter_wagered_amount,
+    `CEJE_Amount` AS ceje_amount,
+    `Contribution_Rate` AS contribution_rate,
+    `WAP_Operator_Fee` AS wap_operator_fee,
+    `Daily_CAP_Setting_Amount` AS daily_cap_setting_amount,
+    `Daily_CAP_Disc_Amount` AS daily_cap_disc_amount,
+    `Daily_MIN_Setting_Amount` AS daily_min_setting_amount,
+    `Daily_MIN_Disc_Amount` AS daily_min_disc_amount,
+    `OOS_Discount` AS oos_discount,
+    `Daily_Flat_Fee` AS daily_flat_fee,
+    `WAP_Operator_Fee_Discount` AS wap_operator_fee_discount,
+    `Total_Operator_Fee` AS total_operator_fee,
+    `Final_Contribution_Amount` AS final_contribution_amount,
+    `IS_DELETED` AS is_deleted
+FROM ${bronze_catalog}.atlas.RPM_Performance_WAP_NewCanada
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.BPC_Plug_Financials AS
+SELECT
+    `BPC Plug Beginning Month Date` AS bpc_plug_beginning_month_date,
+    `BPC Plug Gross Revenue (less Freight)` AS bpc_plug_gross_revenue_less_freight,
+    `BPC Plug Discount` AS bpc_plug_discount,
+    `BPC Plug Net Revenue` AS bpc_plug_net_revenue,
+    `BPC Plug Cost` AS bpc_plug_cost,
+    `BPC Plug Profit` AS bpc_plug_profit,
+    `PC Region` AS pc_region
+FROM ${bronze_catalog}.atlas.BPC_Plug_Financials
+WHERE IS_DELETED = false;
+
+
+CREATE OR REPLACE VIEW ${silver_catalog}.atlas_stage.BPC_Plug_Financials_MachineCosts AS
+SELECT
+    `Unnamed: 1` AS unnamed_1,
+    `Jan` AS jan,
+    `Feb` AS feb,
+    `Mar` AS mar,
+    `Apr` AS apr,
+    `May` AS may,
+    `Jun` AS jun,
+    `Jul` AS jul,
+    `Aug` AS aug,
+    `Sep` AS sep,
+    `Oct` AS oct,
+    `Nov` AS nov,
+    `Dec` AS dec
+FROM ${bronze_catalog}.atlas.BPC_Plug_Financials_MachineCosts
+WHERE IS_DELETED = false;
