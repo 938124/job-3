@@ -1,0 +1,41 @@
+GameOpsInstallBaseActivity
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Fiscal Week` cannot be resolved. Did you mean one of the following? [`Install_Date`, `Serial_Num`, `file_id`, `Activity`, `Brand_Code`]. SQLSTATE: 42703; line 3, pos 2
+
+GameOpsInstallBasePSD
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Fiscal Week` cannot be resolved. Did you mean one of the following? [`Install_Date`, `Serial_Num`, `file_id`, `Brand_Code`, `Date_To`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Exp_Depreciation
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Co. Code` cannot be resolved. Did you mean one of the following? [`Co_Code`, `CapDate`, `Cost_Ctr`, `Brand`, `Class`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Intl_Performance_EMEA_Africa
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `SERIAL NUM` cannot be resolved. Did you mean one of the following? [`SERIAL_NUM`, `MATERIAL_NUM`, `JURIS_NUM`, `BRAND`, `DENOM`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Intl_Performance_EMEA_FixedFee
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Recurring Type` cannot be resolved. Did you mean one of the following? [`Recurring_Type`, `Country`, `Region`, `Remark`, `Cabinet`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Intl_Performance_EMEA_GreeceWLA
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Month` cannot be resolved. Did you mean one of the following? [`WPUPD`, `etl_id`, `file_id`, `EGM_Day_Count`, `Fee_Revenue`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Intl_Performance_LAC
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Serial Number` cannot be resolved. Did you mean one of the following? [`Serial_Number`, `Brand`, `Discount`, `Net_IGT_Rev`, `Theme`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Peformance_PremLotto_DE
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Fiscal End of Month Date` cannot be resolved. Did you mean one of the following? [`EndDate`, `StartDate`, `Amount_Played`, `License`, `Amount_Won`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Peformance_PremLotto_NY
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Fiscal End of Month Date` cannot be resolved. Did you mean one of the following? [`Coupons_Played`, `Location`, `Credits_Won`, `file_id`, `Credits_Played`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Peformance_PremLotto_RI 
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Fiscal End of Month Date` cannot be resolved. Did you mean one of the following? [`Coupons_Played`, `Location`, `Credits_Won`, `file_id`, `Credits_Played`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Performance_CDS_Class_II
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `IS_DELETED` cannot be resolved. Did you mean one of the following? [`Brand`, `IGT_Split`, `Mjpjur`, `Theme`, `etl_id`]. SQLSTATE: 42703; line 26, pos 6
+
+RPM_Performance_CDS_Class_II_ManualBilling
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `End of Month Date` cannot be resolved. Did you mean one of the following? [`End_of_Month_Date`, `Machine_Days`, `Coin_In`, `Install_At`, `Cust_Split`]. SQLSTATE: 42703; line 3, pos 2
+
+RPM_Performance_WAP_NewCanada
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `Brand Code` cannot be resolved. Did you mean one of the following? [`Brand_Code`, `Theme_Code`, `EOD_Date`, `etl_id`, `file_id`]. SQLSTATE: 42703; line 3, pos 2
+
+BW_ZRBINQ_BillingPlans
+[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `DOC TYPE` cannot be resolved. Did you mean one of the following? [`DOC_TYPE`, `TYPE`, `DOC_NUMBER`, `GO_LIVE`, `TO_DATE`]. SQLSTATE: 42703; line 3, pos 2
